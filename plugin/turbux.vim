@@ -243,7 +243,7 @@ function! SendFocusedTestToTmux(file, line) abort
   if s:prefix_for_test(a:file) == g:turbux_command_teaspoon
     let quoted_test_name = s:find_test_name_with_it()
     if !empty(quoted_test_name)
-      let focus = " --filter=\"".quoted_test_name."\""
+      let focus = "SPEC=\"".quoted_test_name."\""
     endif
   endif
 
